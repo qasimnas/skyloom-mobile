@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="favicon.png" type="image/png" />
+    <link rel="stylesheet" href="skyloom.css" />
+    <link rel="stylesheet" href="swiper.css" />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/swiper@8/swiper-bundle.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0"
+    />
+    <link href="gdpr-cookie.css" rel="stylesheet" />
+    <script
+      src="https://code.jquery.com/jquery-3.3.1.min.js"
+      integrity="sha384-tsQFqpEReu7ZLhBV2VZlAu7zcOV+rXbYlF2cqB8txI/8aZajjp4Bqd+V6D5IgvKT"
+      crossorigin="anonymous"
+    ></script>
+
+    <title>skyloom</title>
+  </head>
+  <style>
+ 
+
+  </style>
+  <body>
+<div class="navbar">
+    <span class="material-symbols-outlined menu">menu</span>
+    <div class="popup-image">
+      <!-- Your pop-up image content here -->
+      <img src="UFC/10.png" alt="Pop-up Image" class="popup-image">
+
+    </div>
+  </div>
+  <script>
+
+$(document).ready(function() {
+  var popupVisible = false;
+  $('.material-symbols-outlined.menu').click(function() {
+    if (popupVisible) {
+      $('.popup-image').fadeOut();
+      popupVisible = false;
+    } else {
+      $('.popup-image').fadeIn();
+      popupVisible = true;
+    }
+  });
+
+  $(document).click(function(event) {
+    if (!$(event.target).closest('.navbar').length) {
+      $('.popup-image').fadeOut();
+      popupVisible = false;
+    }
+  });
+});
+
+
+  </script>
+  </body>
+</html>
